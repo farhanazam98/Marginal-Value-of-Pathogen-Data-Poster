@@ -99,6 +99,11 @@
     \itshape\color{eraSlate} [FIGURE: #2]
   \end{minipage}}}
 
+% Visible prose placeholder. Use inside \item as  \item \PN{hint}  --
+% starting an item with a literal "[" makes LaTeX read it as the bullet
+% label and throw it into the margin, so always go through \PN.
+\newcommand{\PN}[1]{{\bfseries\color{red}[PROSE NEEDED]}\ \textit{\color{eraSlate}#1}}
+
 %=====================================================================
 \begin{document}
 \maketitle
@@ -123,9 +128,9 @@
     % raise dual-use risk -> data access controls proposed (Bloomfield
     % 2026) -> but the empirical case is missing. Keep to 4-6 bullets.
     \begin{itemize}
-      \item [PROSE NEEDED -- why pathogen-data controls, and the evidence gap]
-      \item [PROSE NEEDED]
-      \item [PROSE NEEDED]
+      \item \PN{why pathogen-data controls, and the empirical gap}
+      \item \PN{}
+      \item \PN{}
     \end{itemize}
     \vspace{0.5em}
     \begin{tikzfigure}[Explosion of public biological sequence data.]
@@ -138,12 +143,12 @@
     % [PROSE NEEDED] Source: writeup "Research Question". One sharp
     % question + the 3 design choices (public seq data / alignment
     % models / mutation-effect prediction) and why each.
-    {\bfseries\color{eraNavy}[PROSE NEEDED -- the one-line question]}
+    \PN{the one-line research question}
     \vspace{0.6em}
     \begin{itemize}
-      \item \textbf{Protein sequence data:} [PROSE NEEDED]
-      \item \textbf{Alignment models:} [PROSE NEEDED]
-      \item \textbf{Mutation-effect prediction:} [PROSE NEEDED]
+      \item \textbf{Protein sequence data:} \PN{}
+      \item \textbf{Alignment models:} \PN{}
+      \item \textbf{Mutation-effect prediction:} \PN{}
     \end{itemize}
   }
 
@@ -157,8 +162,8 @@
     \end{tikzfigure}
     \vspace{0.4em}
     \begin{itemize}
-      \item [PROSE NEEDED -- snapshots, proteins, depth/relatedness control]
-      \item [PROSE NEEDED]
+      \item \PN{snapshots, proteins, depth/relatedness control}
+      \item \PN{}
     \end{itemize}
   }
 
@@ -186,12 +191,12 @@
     % State the observed shape (rise / plateau / decline) as data, not
     % narrative. Note relatedness not yet optimized.
     \begin{itemize}
-      \item [PROSE NEEDED -- observed trend across snapshots]
-      \item [PROSE NEEDED -- depth vs. relatedness]
+      \item \PN{observed trend across snapshots}
+      \item \PN{depth vs. relatedness}
     \end{itemize}
     \vspace{0.4em}
     \innerblock{Headline number}{%
-      \centering\Large [e.g. peak $\rho = 0.xx$ -- PROSE/DATA NEEDED]}
+      \centering\Large \PN{e.g. peak $\rho = 0.xx$}}
   }
 
 \end{columns}
@@ -206,8 +211,8 @@
     % [PROSE NEEDED] Source: writeup "Motivation" (Bloomfield controls)
     % + "Would this experiment be enough...". Who this informs and how.
     \begin{itemize}
-      \item [PROSE NEEDED -- what a marginal-value curve tells policymakers]
-      \item [PROSE NEEDED]
+      \item \PN{what a marginal-value curve tells policymakers}
+      \item \PN{}
     \end{itemize}
   }
 
@@ -217,20 +222,20 @@
     % Alignment-selection heuristic not yet applied (hardcoded bitscore);
     % narrow task; regulatory arbitrage; capability flatline.
     \begin{itemize}
-      \item [PROSE NEEDED -- alignment-relatedness selection not yet applied]
-      \item [PROSE NEEDED]
-      \item [PROSE NEEDED]
+      \item \PN{alignment-relatedness selection not yet applied}
+      \item \PN{}
+      \item \PN{}
     \end{itemize}
   }
 
   \column{0.32}
   \block{7. Acknowledgements \& Contact}{%
     % [PROSE NEEDED] Advisors, ERA Fellowship, CBH. Contact + links.
-    [PROSE NEEDED -- acknowledgements]
+    \PN{advisors, ERA Fellowship, CBH}
     \vspace{0.6em}
     \begin{itemize}
       \item Farhan Azam
-      \item [email / QR / link -- PROSE NEEDED]
+      \item \PN{email / QR / link}
     \end{itemize}
   }
 
