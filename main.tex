@@ -121,7 +121,9 @@
 %---------------------------------------------------------------------
 \begin{columns}
 
-  \column{0.34}
+  % Left column stacks Background + Research Question so its height
+  % balances the tall Methodology schematic on the right.
+  \column{0.5}
   \block{1. Background \& Motivation}{%
     % [PROSE NEEDED] Source: docs writeup section "Motivation" +
     % "Background & Related Work". Cover: bio-FMs (AlphaFold/ESM-3/Evo 2)
@@ -138,7 +140,6 @@
     \end{tikzfigure}
   }
 
-  \column{0.32}
   \block{2. Research Question}{%
     % [PROSE NEEDED] Source: writeup "Research Question". One sharp
     % question + the 3 design choices (public seq data / alignment
@@ -152,14 +153,14 @@
     \end{itemize}
   }
 
-  \column{0.34}
+  \column{0.5}
   \block{3. Methodology: The Pipeline}{%
     % [PROSE NEEDED] Source: writeup "Methodology & Adaptations" +
     % "The pipeline". PSSM over UniRef100 snapshots 2010-2026; DMS as
     % ground truth (Spearman rho); control for alignment relatedness.
     % Schematic above the prose, full block width for legibility.
     \begin{tikzfigure}
-      \includegraphics[width=0.72\linewidth]{figures/protein-varient-scoring.png}
+      \includegraphics[width=0.48\linewidth]{figures/protein-varient-scoring.png}
     \end{tikzfigure}
     \vspace{0.4em}
     \begin{itemize}
