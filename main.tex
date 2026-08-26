@@ -60,7 +60,7 @@
 %---------------------------------------------------------------------
 \title{The Marginal Value of Pathogen Data}
 \author{Farhan Azam}
-\institute{[AFFILIATION -- e.g. ERA Fellowship]}
+\institute{ERA Fellowship}
 
 % Custom title so the two logos sit in the header corners.
 % Drop real logo files into figures/ and swap the framebox placeholders
@@ -76,7 +76,7 @@
   \begin{minipage}[c]{0.64\linewidth}\centering
     {\color{titlefgcolor}\bfseries\Huge \@title \par}
     \vspace*{0.6em}
-    {\color{titlefgcolor}\Large [SUBTITLE -- one-line restatement of the research question]\par}
+    {\color{titlefgcolor}\Large Does additional protein sequence data increase the ability to predict viral mutation effects?\par}
     \vspace*{1.0em}
     {\color{titlefgcolor}\LARGE \@author \par}
     \vspace*{0.3em}
@@ -128,9 +128,9 @@
     % raise dual-use risk -> data access controls proposed (Bloomfield
     % 2026) -> but the empirical case is missing. Keep to 4-6 bullets.
     \begin{itemize}
-      \item \PN{why pathogen-data controls, and the empirical gap}
-      \item \PN{}
-      \item \PN{}
+      \item Biological AI models have become increasingly capable of protein engineering tasks
+      \item These models can be used to create pathogens that are capable of more harm than their natural counterpart. 
+      \item With the growth of biological datasets, pathogenic data access controls have been proposed to limit the proliferation of these capabilities. 
     \end{itemize}
     \vspace{0.5em}
     \begin{tikzfigure}[Explosion of public biological sequence data.]
@@ -143,12 +143,12 @@
     % [PROSE NEEDED] Source: writeup "Research Question". One sharp
     % question + the 3 design choices (public seq data / alignment
     % models / mutation-effect prediction) and why each.
-    \PN{the one-line research question}
+    Does mutation effect prediction accuracy increase with more data?
     \vspace{0.6em}
     \begin{itemize}
-      \item \textbf{Protein sequence data:} \PN{}
-      \item \textbf{Alignment models:} \PN{}
-      \item \textbf{Mutation-effect prediction:} \PN{}
+      \item \textbf{Data:} Protein sequence data from UniRef100 yearly archives from 2010-2026. 
+      \item \textbf{Model:} Position-Specific Scoring Matrix (PSSM), an alignment-based model that scores biological sequences using multiple sequences alignments (MSA)
+      \item \textbf{Dual-Use Capability:} Measuring mutation-effect prediction, how changes in a protein sequence affect its function, stability, or binding
     \end{itemize}
   }
 
@@ -162,8 +162,9 @@
     \end{tikzfigure}
     \vspace{0.4em}
     \begin{itemize}
-      \item \PN{snapshots, proteins, depth/relatedness control}
-      \item \PN{}
+      \item For different viral proteins we will be measuring the performance of this pipeline on predicting the effect of specific mutations on different functional properties of a protein, such as fitness, binding, and expression
+      \item As an example, we try to predict the effects of specific mutations on the ability of the SARS-CoV-2 spike protein to bind to the human ACE2 receptor. 
+      \item We run this pipeline on database archives, spanning from 2010-2026, using the SARS-CoV-2 spike protein as an input. The output of this pipeline is Spearman's rank correlation coefficient (Spearman's ρ). This represents how accurately this pipeline was able to predict the mutation effects, using experimentally validated deep mutational scanning (DMS) assays as the ground truth. 
     \end{itemize}
   }
 
