@@ -157,15 +157,19 @@
     % [PROSE NEEDED] Source: writeup "Methodology & Adaptations" +
     % "The pipeline". PSSM over UniRef100 snapshots 2010-2026; DMS as
     % ground truth (Spearman rho); control for alignment relatedness.
-    \begin{tikzfigure}[PSSM scores every point mutation; DMS gives ground truth.]
-      \figplaceholder[16cm]{pipeline / PSSM schematic -- writeup image4}
-    \end{tikzfigure}
-    \vspace{0.4em}
-    \begin{itemize}
-      \item For different viral proteins we will be measuring the performance of this pipeline on predicting the effect of specific mutations on different functional properties of a protein, such as fitness, binding, and expression
-      \item As an example, we try to predict the effects of specific mutations on the ability of the SARS-CoV-2 spike protein to bind to the human ACE2 receptor. 
-      \item We run this pipeline on database archives, spanning from 2010-2026, using the SARS-CoV-2 spike protein as an input. The output of this pipeline is Spearman's rank correlation coefficient (Spearman's $\rho$). This represents how accurately this pipeline was able to predict the mutation effects, using experimentally validated deep mutational scanning (DMS) assays as the ground truth. 
-    \end{itemize}
+    % Tall vertical schematic sits beside the prose to keep the block compact.
+    \begin{minipage}[t]{0.42\linewidth}
+      \vspace{0pt}
+      \includegraphics[width=\linewidth]{figures/protein-varient-scoring.png}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.54\linewidth}
+      \vspace{0pt}
+      \begin{itemize}
+        \item For different viral proteins we will be measuring the performance of this pipeline on predicting the effect of specific mutations on different functional properties of a protein, such as fitness, binding, and expression
+        \item As an example, we try to predict the effects of specific mutations on the ability of the SARS-CoV-2 spike protein to bind to the human ACE2 receptor.
+        \item We run this pipeline on database archives, spanning from 2010-2026, using the SARS-CoV-2 spike protein as an input. The output of this pipeline is Spearman's rank correlation coefficient (Spearman's $\rho$). This represents how accurately this pipeline was able to predict the mutation effects, using experimentally validated deep mutational scanning (DMS) assays as the ground truth.
+      \end{itemize}
+    \end{minipage}
   }
 
 \end{columns}
