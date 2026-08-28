@@ -112,10 +112,11 @@
 \newcommand{\PN}[1]{{\bfseries\color{red}[PROSE NEEDED]}\ \textit{\color{eraSlate}#1}}
 
 %---------------------------------------------------------------------
-%  Enlarge figure captions. tikzposter hardcodes \small in the
-%  tikzfigure environment, which is unreadable at A0 viewing distance.
-%  Redefinition below is identical to the class except the caption is
-%  set at \large instead of \small.
+%  Figure captions. tikzposter hardcodes \small (unreadable at A0) and
+%  separates the caption from the image with \\[10pt] -- inside a tall
+%  centered box that "\\" costs a full baseline-skip, so the caption
+%  floats way below the figure. Redefinition sets the caption at \large
+%  and closes the image paragraph with \par + a small fixed skip instead.
 %---------------------------------------------------------------------
 \makeatletter
 \renewenvironment{tikzfigure}[1][]{%
@@ -125,7 +126,7 @@
   \begin{center}%
 }{%
   \ifx\rememberparameter\@empty\else
-    \\[10pt]{\large Fig.~\thefigurecounter: \rememberparameter}%
+    \par\vspace{3pt}{\large Fig.~\thefigurecounter: \rememberparameter\par}%
   \fi
   \end{center}%
 }
