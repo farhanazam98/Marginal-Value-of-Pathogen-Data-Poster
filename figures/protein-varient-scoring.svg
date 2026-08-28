@@ -39,7 +39,7 @@
     <text x="150" y="589" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">2</text>
 
     <!-- matrix icon -->
-    <g transform="translate(190,600)" font-size="16" fill="#12325B" font-family="monospace">
+    <g transform="translate(190,600)" font-size="19" fill="#12325B" font-family="monospace">
       <text x="0" y="0" font-weight="bold">A   C   D  ... Y</text>
       <text x="0" y="25">&#8226;   &#8226;   &#8226;  ...  &#8722;</text>
       <text x="0" y="50">&#8226;   &#8226;   &#8226;  ...  &#8722;</text>
@@ -95,10 +95,10 @@
       <rect x="72" y="10" width="14" height="90"/>
       <rect x="96" y="50" width="14" height="50"/>
       <line x1="-5" y1="100" x2="120" y2="100" stroke="#12325B" stroke-width="3"/>
-      <text x="4" y="120" font-size="14" stroke="none" fill="#12325B">A</text>
-      <text x="28" y="120" font-size="14" stroke="none" fill="#12325B">C</text>
-      <text x="52" y="120" font-size="14" stroke="none" fill="#12325B">D</text>
-      <text x="88" y="120" font-size="14" stroke="none" fill="#12325B">Y</text>
+      <text x="2" y="122" font-size="18" stroke="none" fill="#12325B">A</text>
+      <text x="26" y="122" font-size="18" stroke="none" fill="#12325B">C</text>
+      <text x="50" y="122" font-size="18" stroke="none" fill="#12325B">D</text>
+      <text x="86" y="122" font-size="18" stroke="none" fill="#12325B">Y</text>
     </g>
 
     <text x="390" y="1155" font-size="34" font-weight="bold" fill="#12325B">Build PSSM</text>
@@ -114,27 +114,26 @@
     <text x="150" y="1369" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">5</text>
 
     <!-- score table icon -->
-    <g transform="translate(196,1385) scale(0.85)" font-size="13" font-family="monospace" fill="#1E7D6B">
-      <rect x="35" y="-15" width="150" height="105" fill="none" stroke="#1E7D6B" stroke-width="2"/>
-      <line x1="35" y1="10" x2="185" y2="10" stroke="#1E7D6B" stroke-width="1.5"/>
-      <line x1="35" y1="35" x2="185" y2="35" stroke="#1E7D6B" stroke-width="1.5"/>
-      <line x1="35" y1="60" x2="185" y2="60" stroke="#1E7D6B" stroke-width="1.5"/>
-      <line x1="72" y1="-15" x2="72" y2="90" stroke="#1E7D6B" stroke-width="1.5"/>
-      <line x1="109" y1="-15" x2="109" y2="90" stroke="#1E7D6B" stroke-width="1.5"/>
-      <line x1="146" y1="-15" x2="146" y2="90" stroke="#1E7D6B" stroke-width="1.5"/>
-      <text x="-14" y="-2">pos 1</text>
-      <text x="-14" y="23">pos 2</text>
-      <text x="-14" y="48">...</text>
-      <text x="-14" y="80">pos N</text>
+    <g transform="translate(196,1385)" font-size="15" font-family="monospace" fill="#1E7D6B">
+      <rect x="35" y="-15" width="126" height="105" fill="none" stroke="#1E7D6B" stroke-width="2"/>
+      <line x1="35" y1="10" x2="161" y2="10" stroke="#1E7D6B" stroke-width="1.5"/>
+      <line x1="35" y1="35" x2="161" y2="35" stroke="#1E7D6B" stroke-width="1.5"/>
+      <line x1="35" y1="60" x2="161" y2="60" stroke="#1E7D6B" stroke-width="1.5"/>
+      <line x1="77" y1="-15" x2="77" y2="90" stroke="#1E7D6B" stroke-width="1.5"/>
+      <line x1="119" y1="-15" x2="119" y2="90" stroke="#1E7D6B" stroke-width="1.5"/>
+      <text x="-16" y="-2">pos 1</text>
+      <text x="-16" y="23">pos 2</text>
+      <text x="-16" y="48">...</text>
+      <text x="-16" y="80">pos N</text>
       <text x="40" y="-2">0.5</text>
-      <text x="77" y="-2">-1.2</text>
-      <text x="151" y="-2">0.3</text>
+      <text x="80" y="-2">-1.2</text>
+      <text x="122" y="-2">0.3</text>
       <text x="40" y="23">-0.7</text>
-      <text x="77" y="23">0.8</text>
-      <text x="151" y="23">-1.1</text>
+      <text x="80" y="23">0.8</text>
+      <text x="122" y="23">-1.1</text>
       <text x="40" y="80">0.2</text>
-      <text x="77" y="80">-0.4</text>
-      <text x="151" y="80">1.3</text>
+      <text x="80" y="80">-0.4</text>
+      <text x="122" y="80">1.3</text>
     </g>
 
     <text x="390" y="1400" font-size="34" font-weight="bold" fill="#1E7D6B">Score Variants</text>
@@ -153,8 +152,8 @@
     <g transform="translate(210,1650)">
       <line x1="0" y1="0" x2="0" y2="100" stroke="#12325B" stroke-width="3"/>
       <line x1="0" y1="100" x2="120" y2="100" stroke="#12325B" stroke-width="3"/>
-      <text x="-14" y="55" font-size="11" fill="#12325B" transform="rotate(-90,-14,55)">Predicted score</text>
-      <text x="30" y="118" font-size="12" fill="#12325B">DMS score</text>
+      <text x="-14" y="50" font-size="12" fill="#12325B" text-anchor="middle" transform="rotate(-90,-14,50)">Predicted score</text>
+      <text x="26" y="120" font-size="13" fill="#12325B">DMS score</text>
       <circle cx="15" cy="80" r="3.5" fill="#12325B"/>
       <circle cx="25" cy="70" r="3.5" fill="#12325B"/>
       <circle cx="35" cy="75" r="3.5" fill="#12325B"/>
