@@ -26,9 +26,15 @@ When asked for a change: make the edit, then recompile immediately so the user c
 
 - Single A0 portrait poster (841mm x 1189mm / 33.1in x 46.8in), LaTeX + `tikzposter`, compiled to one PDF.
 - **Raster images must be 300dpi+ at their placed size on the A0 canvas** — not native dpi, but dpi as actually rendered at the size it's placed. Prefer vector PDF/SVG figures over raster wherever the pipeline repo's source allows it, since vector sidesteps the dpi requirement entirely.
-- **TODO before finalizing: convert the current figures to SVG/vector.** The figures now in the poster are raster and will not meet the 300dpi rule at print size — re-export them as SVG (or vector PDF) from their source and swap them in before the poster is considered final:
-  - `figures/protein-varient-scoring.png` — pipeline schematic, ~876px wide (~230dpi at placed size). Highest priority.
-  - `figures/uniref100_growth.pdf` — growth chart; already vector PDF, but regenerate as SVG if a single vector format is wanted across all figures (matplotlib: `savefig(..., format="svg")`).
+### TODO before finalizing
+
+**Figures** — every figure now in the poster is raster at a resolution that will visibly pixelate at A0 print size. Re-export each from its source as vector (SVG or vector PDF), or failing that as raster at 300dpi+ measured at its placed size, and swap it in before the poster is considered final.
+
+1. **Pipeline schematic** (`figures/protein-varient-scoring.png`, Methodology block) — rebuild it: drop the first stage, and widen the remaining stages so the diagram spans the full width of its column instead of sitting at `0.645\linewidth`. Re-render in a non-pixelating format. Highest priority.
+2. **Results figure** (Band 2, currently the `\figplaceholder[28cm]` stub) — drop in the real marginal-value plot once data lands, as vector or 300dpi+ raster, sized to the slot per the layout TODO below.
+3. **Growth chart** (`figures/uniref100_growth.pdf`, Background & Motivation block) — verify it is true vector; if it renders pixelated, re-export it clean from source (matplotlib: `savefig(..., format="pdf")` or `format="svg"`).
+
+**Layout** — the interpretation and implications content does not all fit at a legible size in the current three-band grid: Band 2's right column ("What the curve shows") plus the full Band 3 row (Policy Relevance, Limitations, Acknowledgements & Contact). Consolidate — merge or cut sections, tighten bullets, or restructure the bands — so everything fits without shrinking body text below the size used elsewhere on the poster.
 - Minimize AI-generated content per organizer spec: no AI-generated images/illustrations/icons, no AI-written filler passed off as findings. Figures must be real pipeline output copied in as static files — never fabricated or regenerated. Claude assisting with LaTeX layout, typesetting, and prose editing is fine; Claude inventing scientific content or illustrations is not.
 
 ## Structure / style
