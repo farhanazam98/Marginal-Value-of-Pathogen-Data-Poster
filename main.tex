@@ -169,7 +169,7 @@
       \item To justify the cost of pathogenic access controls, we seek to quantify the expected increase in dual-use capabilities from by future data
     \end{itemize}
     \vspace{0.5em}
-    \begin{tikzfigure}[We’ve seen an explosion of biological data in recent years. However, it’s unclear whether additional data has improved model performance, specifically on tasks related to viral protein design capabilities.]
+    \begin{tikzfigure}[Biological data has exploded in recent years, but it remains unclear whether additional data has improved model performance on viral protein design tasks.]
       \includegraphics[width=\linewidth]{figures/uniref100_growth.pdf}
     \end{tikzfigure}
   }
@@ -212,7 +212,7 @@
     % Real pipeline output only -- copy static files into figures/.
     % Keep the PRELIMINARY tag until the alignment-selection / PSSM
     % diagnosis is resolved (see CLAUDE.md).
-    \begin{tikzfigure}[{Additional protein sequence data does not seem to reliably increase mutation effect prediction on SARS-CoV-2 proteins. For fitness of SARS-CoV-2 main protease, performance increases marginally. For binding and expressio of spike (S) protein of SARS-CoV-2 spike protein, additional data hinders performance.}]
+    \begin{tikzfigure}[{Additional protein sequence data does not seem to reliably increase mutation effect prediction on SARS-CoV-2 proteins. For fitness of SARS-CoV-2 main protease, performance increases marginally. For binding and expression of SARS-CoV-2 spike protein, additional data hinders performance.}]
       \includegraphics[width=\linewidth]{figures/pssm_accuracy_three_assays_overlay.pdf}
     \end{tikzfigure}
   }
@@ -224,10 +224,11 @@
     % narrow task; regulatory arbitrage; capability flatline.
     \begin{itemize}
       \item For the preliminary results, we did not implement the alignment selection heuristic outlined in Sarah Gurev et al., 2025. Instead, we hardcoded a bitscore per residue  value of 0.1. 
+      \item These results are specific to SARS-CoV-2. We would like to run this pipeline on additional viruses to see if this trend generalizes across viruses. 
     \end{itemize}
   }
 
-  \block{6. Discussion/Policy Relevance}{%
+  \block{6. Discussion}{%
     % [PROSE NEEDED] Source: writeup "Preliminary Results" + "Discussion"
     % + "Motivation" (Bloomfield controls) + "Would this experiment be
     % enough...". State the observed curve shape (rise / plateau /
