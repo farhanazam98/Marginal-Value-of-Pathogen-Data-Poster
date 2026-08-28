@@ -110,6 +110,26 @@
 % label and throw it into the margin, so always go through \PN.
 \newcommand{\PN}[1]{{\bfseries\color{red}[PROSE NEEDED]}\ \textit{\color{eraSlate}#1}}
 
+%---------------------------------------------------------------------
+%  Enlarge figure captions. tikzposter hardcodes \small in the
+%  tikzfigure environment, which is unreadable at A0 viewing distance.
+%  Redefinition below is identical to the class except the caption is
+%  set at \large instead of \small.
+%---------------------------------------------------------------------
+\makeatletter
+\renewenvironment{tikzfigure}[1][]{%
+  \def\rememberparameter{#1}%
+  \vspace{10pt}%
+  \refstepcounter{figurecounter}%
+  \begin{center}%
+}{%
+  \ifx\rememberparameter\@empty\else
+    \\[10pt]{\large Fig.~\thefigurecounter: \rememberparameter}%
+  \fi
+  \end{center}%
+}
+\makeatother
+
 %=====================================================================
 \begin{document}
 \maketitle
@@ -185,8 +205,8 @@
     % Real pipeline output only -- copy static files into figures/.
     % Keep the PRELIMINARY tag until the alignment-selection / PSSM
     % diagnosis is resolved (see CLAUDE.md).
-    \begin{tikzfigure}[{PROSE NEEDED --- caption for the protease PSSM-accuracy vs.\ snapshot-year plot}]
-      \includegraphics[width=\linewidth]{figures/protease_accuracy_vs_snapshot_year.png}
+    \begin{tikzfigure}[{PROSE NEEDED --- caption for the three-assay PSSM-accuracy vs.\ snapshot-year plot (all series at bitscore/residue $=0.1$)}]
+      \includegraphics[width=\linewidth]{figures/pssm_accuracy_three_assays_overlay.pdf}
     \end{tikzfigure}
   }
 
