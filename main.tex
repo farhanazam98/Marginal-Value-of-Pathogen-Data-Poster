@@ -73,8 +73,9 @@
   \centering
   \begin{minipage}[c]{0.14\linewidth}\centering
     % White-on-transparent recolour of images/era-logo.png so the black
-    % logo reads on the dark navy header bar.
-    \includegraphics[height=5cm]{images/era-logo-white.png}
+    % logo reads on the dark navy header bar. ~1889px tall -> even at 8cm
+    % the placed resolution is ~600dpi, well clear of pixelation.
+    \includegraphics[height=8cm]{images/era-logo-white.png}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.70\linewidth}\centering
     % Title typeset literally, NOT via \@title: tikzposter wraps \@title in
