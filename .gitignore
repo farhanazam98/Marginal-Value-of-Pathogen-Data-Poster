@@ -1,1 +1,4 @@
 .venv-svg/
+
+# local render artifacts
+build/

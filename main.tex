@@ -71,12 +71,18 @@
 \makeatletter
 \settitle{
   \centering
-  \begin{minipage}[c]{0.15\linewidth}\centering
+  \begin{minipage}[c]{0.14\linewidth}\centering
     % \includegraphics[width=\linewidth]{figures/era-logo.pdf}
     \color{white}\framebox[0.95\linewidth]{\rule{0pt}{5cm}\ ERA logo\ }
   \end{minipage}\hfill
-  \begin{minipage}[c]{0.66\linewidth}\centering
-    {\color{titlefgcolor}\bfseries\Huge \@title \par}
+  \begin{minipage}[c]{0.70\linewidth}\centering
+    % Title typeset literally, NOT via \@title: tikzposter wraps \@title in
+    % \scalebox (an unbreakable \hbox), so \@title can never line-break and
+    % overflows the header. The explicit \\ sets the two-line break; the
+    % minipage width is the safety net if a line still runs long.
+    {\color{titlefgcolor}\bfseries\huge
+      The Marginal Value of Protein Sequence Data\\
+      on Mutation Effect Prediction\par}
     \vspace*{0.6em}
     {\color{titlefgcolor}\Large Does additional protein sequence data increase the ability to predict viral mutation effects?\par}
     \vspace*{1.0em}
@@ -85,7 +91,7 @@
     {\color{titlefgcolor}\large \@institute \par}
   \end{minipage}\hfill
   % right-side spacer keeps the title block centred now that the CBH logo is gone
-  \begin{minipage}[c]{0.15\linewidth}\ \end{minipage}
+  \begin{minipage}[c]{0.14\linewidth}\ \end{minipage}
 }
 \makeatother
 
