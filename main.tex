@@ -137,7 +137,10 @@
 %---------------------------------------------------------------------
 %  KEY TAKEAWAY  --  full-width, the one line a passer-by reads
 %---------------------------------------------------------------------
-\block{}{%
+% bodyverticalshift/bodyoffsety zeroed: the Basic blockstyle adds 15mm of
+% dead space at the top of every block body (to clear the title bar). This
+% block has no title, so that shift just pushes the line off-centre.
+\block[bodyverticalshift=0pt,bodyoffsety=0pt]{}{%
   \centering\LARGE\bfseries\color{eraNavy}
   [KEY TAKEAWAY -- one sentence stating the headline result / claim]
 }
