@@ -164,9 +164,9 @@
     % 2026) -> but the empirical case is missing. Keep to 4-6 bullets.
     \begin{itemize}
       \item Biological AI models have become increasingly capable of protein engineering tasks
-      \item These models can be used to create pathogens that are capable of more harm than their natural counterpart. 
-      \item With the growth of biological datasets, pathogenic data access controls have been proposed to limit the proliferation of these capabilities. 
-      \item To justify the cost of pathogenic access controls, we seek to quantify the expected increase in dual-use capabilities from by future data
+      \item These models can be used to create pathogens that are capable of more harm than their natural counterparts.
+      \item With the growth of biological datasets, pathogen data access controls have been proposed to limit the proliferation of these capabilities.
+      \item To justify the cost of pathogen data access controls, we seek to quantify the expected increase in dual-use capabilities from future data
     \end{itemize}
     \vspace{0.5em}
     \begin{tikzfigure}[Biological data has exploded in recent years, but it remains unclear whether additional data has improved model performance on viral protein design tasks.]
@@ -181,8 +181,8 @@
     Does mutation effect prediction accuracy increase with more data?
     \vspace{0.6em}
     \begin{itemize}
-      \item \textbf{Data:} Protein sequence data from UniRef100 yearly archives from 2010-2026. 
-      \item \textbf{Model:} Position-Specific Scoring Matrix (PSSM), an alignment-based model that scores biological sequences using multiple sequences alignments (MSA)
+      \item \textbf{Data:} Protein sequence data from UniRef100 yearly archives, 2010--2026.
+      \item \textbf{Model:} Position-Specific Scoring Matrix (PSSM), an alignment-based model that scores biological sequences using multiple sequence alignments (MSA)
       \item \textbf{Dual-Use Capability:} Measuring mutation-effect prediction, how changes in a protein sequence affect its function, stability, or binding
     \end{itemize}
   }
@@ -208,11 +208,11 @@
 \begin{columns}
 
   \column{0.62}
-  \block{4. Preliminary Results }{%
+  \block{4. Preliminary Results}{%
     % Real pipeline output only -- copy static files into figures/.
     % Keep the PRELIMINARY tag until the alignment-selection / PSSM
     % diagnosis is resolved (see CLAUDE.md).
-    \begin{tikzfigure}[{Additional protein sequence data does not seem to reliably increase mutation effect prediction on SARS-CoV-2 proteins. For fitness of SARS-CoV-2 main protease, performance increases marginally. For binding and expression of SARS-CoV-2 spike protein, additional data hinders performance.}]
+    \begin{tikzfigure}[{Additional protein sequence data does not seem to reliably increase mutation-effect prediction accuracy on SARS-CoV-2 proteins. For fitness of SARS-CoV-2 main protease, performance increases marginally. For binding and expression of SARS-CoV-2 spike protein, additional data hinders performance.}]
       \includegraphics[width=\linewidth]{figures/pssm_accuracy_three_assays_overlay.pdf}
     \end{tikzfigure}
   }
@@ -223,8 +223,8 @@
     % Alignment-selection heuristic not yet applied (hardcoded bitscore);
     % narrow task; regulatory arbitrage; capability flatline.
     \begin{itemize}
-      \item For the preliminary results, we did not implement the alignment selection heuristic outlined in Sarah Gurev et al., 2025. Instead, we hardcoded a bitscore per residue  value of 0.1. 
-      \item These results are specific to SARS-CoV-2. We would like to run this pipeline on additional viruses to see if this trend generalizes across viruses. 
+      \item For the preliminary results, we did not implement the alignment selection heuristic outlined in Gurev et al. (2025). Instead, we hardcoded a bitscore-per-residue value of 0.1.
+      \item These results are specific to SARS-CoV-2. We would like to run this pipeline on additional viruses to see whether the trend generalizes.
     \end{itemize}
   }
 
@@ -235,9 +235,9 @@
     % decline) as data; then what a marginal-value curve tells
     % policymakers and who it informs.
     \begin{itemize}
-      \item Our hypothesis is for why additional data doesn't improve performance has to due with the quality of the data. Redundant protein sequence data might be adding noise. 
+      \item Our hypothesis for why additional data doesn't improve performance has to do with the quality of the data. Redundant protein sequence data might be adding noise.
       \item This experiment was conducted using the most publicly accessible data available. 
-      \item More specific, curated, and experimentally validated data could lead to more substantial increases in dual use capabilities. 
+      \item More specific, curated, and experimentally validated data could lead to more substantial increases in dual-use capabilities.
       \item More empirical assessment of the following capabilities would be valuable: transmissibility and virulence prediction; antigen–antibody affinity prediction; and protein structure and inverse-folding prediction.
     \end{itemize}
   }
