@@ -7,6 +7,9 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 mkdir -p "$ROOT/build"
 cd "$ROOT"
 
+# Homebrew bin isn't always on PATH in non-login shells
+[ -x /opt/homebrew/bin/tectonic ] && PATH="/opt/homebrew/bin:$PATH"
+
 if command -v tectonic >/dev/null 2>&1; then
   tectonic -X compile main.tex --outdir build
 elif command -v pdflatex >/dev/null 2>&1; then
