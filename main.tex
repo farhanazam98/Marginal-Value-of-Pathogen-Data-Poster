@@ -174,14 +174,15 @@
 \begin{columns}
 
   \column{0.62}
-  \block{4. Results \ \textcolor{red}{[PRELIMINARY]}}{%
-    % Real pipeline output only -- copy static files into figures/.
-    % Keep the PRELIMINARY tag until the alignment-selection / PSSM
-    % diagnosis is resolved (see CLAUDE.md).
-    \begin{tikzfigure}[Spearman $\rho$ vs. UniRef100 snapshot year -- SARS-CoV-2 Spike RBD (binding + expression).]
-      \figplaceholder[28cm]{marginal-value curve -- writeup image5/image6}
-    \end{tikzfigure}
-  }
+\block{4. Results \ \textcolor{red}{[PRELIMINARY]}}{%
+  \begin{tikzfigure}[MOCK binding curve -- layout test only.]
+    \includegraphics[width=\linewidth]{layout-test/mock_slot_A.pdf}
+  \end{tikzfigure}
+  \vspace{6mm}
+  \begin{tikzfigure}[MOCK expression curve -- layout test only.]
+    \includegraphics[width=\linewidth]{layout-test/mock_slot_B.pdf}
+  \end{tikzfigure}
+}
 
   \column{0.38}
   \block{What the curve shows}{%
