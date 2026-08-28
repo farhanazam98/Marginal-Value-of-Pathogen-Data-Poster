@@ -160,14 +160,9 @@
     % ground truth (Spearman rho); control for alignment relatedness.
     % Schematic above the prose, full block width for legibility.
     \begin{tikzfigure}
-      \includegraphics[width=0.48\linewidth]{figures/protein-varient-scoring.png}
+      \includegraphics[width=0.645\linewidth]{figures/protein-varient-scoring.png}
     \end{tikzfigure}
     \vspace{0.4em}
-    \begin{itemize}
-      \item For different viral proteins we will be measuring the performance of this pipeline on predicting the effect of specific mutations on different functional properties of a protein, such as fitness, binding, and expression
-      \item As an example, we try to predict the effects of specific mutations on the ability of the SARS-CoV-2 spike protein to bind to the human ACE2 receptor.
-      \item We run this pipeline on database archives, spanning from 2010-2026, using the SARS-CoV-2 spike protein as an input. The output of this pipeline is Spearman's rank correlation coefficient (Spearman's $\rho$). This represents how accurately this pipeline was able to predict the mutation effects, using experimentally validated deep mutational scanning (DMS) assays as the ground truth.
-    \end{itemize}
   }
 
 \end{columns}
