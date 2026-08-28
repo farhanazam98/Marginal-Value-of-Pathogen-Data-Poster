@@ -160,7 +160,7 @@
     % ground truth (Spearman rho); control for alignment relatedness.
     % Schematic above the prose, full block width for legibility.
     \begin{tikzfigure}
-      \includegraphics[width=0.645\linewidth]{figures/protein-varient-scoring.png}
+      \includegraphics[width=0.645\linewidth]{figures/protein-varient-scoring-v2.png}
     \end{tikzfigure}
     \vspace{0.4em}
   }
@@ -174,15 +174,14 @@
 \begin{columns}
 
   \column{0.62}
-\block{4. Results \ \textcolor{red}{[PRELIMINARY]}}{%
-  \begin{tikzfigure}[MOCK binding curve -- layout test only.]
-    \includegraphics[width=\linewidth]{layout-test/mock_slot_A.pdf}
-  \end{tikzfigure}
-  \vspace{6mm}
-  \begin{tikzfigure}[MOCK expression curve -- layout test only.]
-    \includegraphics[width=\linewidth]{layout-test/mock_slot_B.pdf}
-  \end{tikzfigure}
-}
+  \block{4. Results \ \textcolor{red}{[PRELIMINARY]}}{%
+    % Real pipeline output only -- copy static files into figures/.
+    % Keep the PRELIMINARY tag until the alignment-selection / PSSM
+    % diagnosis is resolved (see CLAUDE.md).
+    \begin{tikzfigure}[{PROSE NEEDED --- caption for the protease PSSM-accuracy vs.\ snapshot-year plot}]
+      \includegraphics[width=\linewidth]{figures/protease_accuracy_vs_snapshot_year.png}
+    \end{tikzfigure}
+  }
 
   \column{0.38}
   \block{What the curve shows}{%
