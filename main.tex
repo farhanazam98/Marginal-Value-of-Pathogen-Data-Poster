@@ -176,7 +176,7 @@
 \begin{columns}
 
   \column{0.62}
-  \block{4. Results \ \textcolor{red}{[PRELIMINARY]}}{%
+  \block{4. Preliminary Results }{%
     % Real pipeline output only -- copy static files into figures/.
     % Keep the PRELIMINARY tag until the alignment-selection / PSSM
     % diagnosis is resolved (see CLAUDE.md).
@@ -191,9 +191,8 @@
     % Alignment-selection heuristic not yet applied (hardcoded bitscore);
     % narrow task; regulatory arbitrage; capability flatline.
     \begin{itemize}
-      \item \PN{alignment-relatedness selection not yet applied}
-      \item \PN{}
-      \item \PN{}
+      \item For the preliminary results, we did not implement the alignment selection heuristic outlined in Sarah Gurev et al., 2025. Instead, we hardcoded a bitscore per residue  value of 0.1. 
+      \item This is trend is specific to one DMS type (fitness assay) on one protein (SARS-CoV-2 main protease). With other DMS sets (binding and express on spike protein of SARS-CoV-2) we did not see an improvement in performance. 
     \end{itemize}
   }
 
