@@ -10,13 +10,22 @@ The repo currently contains the unmodified Overleaf `tikzposter` starter templat
 
 ## Build
 
-```
-pdflatex main.tex
-```
+The canonical build is `pdflatex main.tex`, run twice if citations/references are added (for cross-reference resolution). Output goes to `build/` (gitignored; create it if missing).
 
-Run twice if citations/references are added (for cross-reference resolution). Output should be directed to `build/poster.pdf` (create `build/` if it doesn't exist).
+**This machine has no system TeX.** Two ways to compile locally without one:
 
-There is no lint or test suite in this repo — the only validation is a successful compile plus visual review of the rendered PDF.
+- **`./scripts/render-local.sh`** — the helper. Prefers `tectonic`, falls back to `pdflatex` then a Docker TeXLive image. Writes `build/main.pdf`.
+- **Direct:** `tectonic -X compile main.tex --outdir build` (~5s; first run downloads packages to `~/Library/Caches/TectonicProject.Tectonic/`). Install with `brew install tectonic`.
+
+`tectonic` is XeTeX-based, not pdfTeX. It's fine for visual review, but confirm anything layout-sensitive still holds under `pdflatex` on Overleaf before calling it done. Known harmless `tectonic` noise: `Missing character ... in font nullfont!` warnings from the KEY TAKEAWAY block, and it emits `build/main.pdf` not `build/poster.pdf`.
+
+**Visual review** (no `pdftoppm`/`magick`/`gs` on this machine): `sips -s format png build/main.pdf --out build/full.png --resampleWidth 2000` rasterizes page 1, then crop with PIL — `sips -c` only crops centered, so use `/usr/bin/python3` (has Pillow) for a top/region crop, then Read the PNG.
+
+There is no lint or test suite — validation is a successful compile plus visual review of the rendered PDF.
+
+### tikzposter title gotcha
+
+`\title` wraps its argument in `\scalebox` (an unbreakable `\hbox`), so `\@title` can never line-break and will overflow the header. The `\settitle` block in `main.tex` typesets the title text literally with an explicit `\\` instead — keep it that way; don't route the display title back through `\@title`.
 
 ## Iteration convention
 
